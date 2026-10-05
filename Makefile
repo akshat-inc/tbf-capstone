@@ -5,3 +5,5 @@ tbf: src/main.cpp src/token_bucket.hpp src/policer.hpp src/shaper.hpp src/traffi
 > $(CXX) $(CXXFLAGS) -o tbf src/main.cpp
 clean:
 > rm -f tbf out.csv
+ctl: src/tbf_ctl.cpp include/tbf_ioctl.h
+> $(CXX) $(CXXFLAGS) -o tbf_ctl src/tbf_ctl.cpp
